@@ -24,7 +24,8 @@ model = pickle.load(open("model.pkl", 'rb'))
 
 @app.route("/")
 def landing():
-    return render_template("/index.html")
+    response = {"msg": "hai"}
+    return response
 @app.route("/data", methods=["GET", "POST"])
 def coba():
     if request.method == "GET":
